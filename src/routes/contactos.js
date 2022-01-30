@@ -51,7 +51,7 @@ router.put('/:id',(req,res) => {
         }
     });
 })
-/* PUT */
+/* DELETE */
 router.delete('/:id',(req,res) => {
     const {id} = req.params;
     mysqlConnection.query('DELETE FROM contacto where id = ?',[id], (err, rows, fields) => {
