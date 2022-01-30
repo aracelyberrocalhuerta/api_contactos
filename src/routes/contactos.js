@@ -2,7 +2,7 @@ const express  = require('express');
 const router = express.Router();
 const mysqlConnection = require('../database');
 
-router.get('/', (req,res)=>{
+router.get('/contactos', (req,res)=>{
     mysqlConnection.query('SELECT * FROM contacto',(err,rows,fields) =>{
         if (!err){
             res.json(rows);
